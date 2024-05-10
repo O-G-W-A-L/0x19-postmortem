@@ -1,3 +1,7 @@
+
+![Sql1](https://github.com/O-G-W-A-L/0x19-postmortem/assets/138779092/a7c87fbd-de1b-4f3f-82fe-9eb9e7512124)
+![1](https://github.com/O-G-W-A-L/0x19-postmortem/assets/138779092/c0b0d9a8-b391-49b5-9255-75349462a23c)
+
 ### POSTMORTEM: UNAUTHORIZED ACCESS TO CUSTOMER DATABASE
 ### Incident Description:
 #### On May 7, 2024, at 00:00 hours, an external security alert from our intrusion detection system (IDS) indicated suspicious activity originating from an unknown IP address. This led to a Global outage of our web application firewall resulting into;-
@@ -32,6 +36,7 @@
 #### 7:00:
 + An official communication is sent to affected customers via email, explaining the incident and outlining recommended actions, such as password resets.
 #### Root Cause Analysis:
+![5](https://github.com/O-G-W-A-L/0x19-postmortem/assets/138779092/ca26ac11-6bce-4ab2-ab55-8436700a5202)
 + The root cause of the incident was a successful SQL injection attack against a vulnerable web application server. The attacker exploited a misconfigured Web Application Firewall that allowed them to inject malicious SQL code into database queries. This ultimately granted them unauthorized access to the customer database.
 #### Contributing Factors:
 + Unpatched vulnerability: The web application server contained a known SQL injection vulnerability that had not been patched.
